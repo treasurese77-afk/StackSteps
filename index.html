@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="StackSteps: Unearthing the best in Web Development. Dive into high-value coding tutorials, architectural guides, and open-source projects.">
+  
+  
+  
+  <title>Treasure Devs</title>
+  <style>
+    .roadmap-container {
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      font-family: sans-serif;
+    }
+    
+    /* Styling the path */
+    .roadmap-path {
+      fill: none;
+      stroke: #e0e0e0;
+      stroke-width: 8;
+      stroke-linecap: round;
+    }
+    
+    /* Progress color */
+    .roadmap-progress {
+      fill: none;
+      stroke: #4D77FF;
+      stroke-width: 8;
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: draw 3s forwards ease-in-out;
+    }
+    
+    /* Node styling */
+    .node {
+      fill: white;
+      stroke: #4D77FF;
+      stroke-width: 4;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    .node:hover {
+      fill: #4D77FF;
+      r: 15;
+    }
+    
+    /* Labels */
+    .label {
+      font-size: 14px;
+      font-weight: bold;
+      fill: #333;
+      pointer-events: none;
+    }
+    
+    @keyframes draw {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+  
+  <!-- HTML -->
+  
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  
+  <!-- Basic Apple Touch Icon -->
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  
+  
+  
+</head>
+
+<body>
+  <header>
+    <h1 class="logo">StackSteps</h1>
+    <p class="moto">Master the stack, one step at a time.</p>
+    
+    
+    
+  </header>
+  
+  <div class="main-wrapper">
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <a href="javascript:void(0)" class="nav-item active" onclick="showPage('home')" title="Home">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+            <polyline points="9 22 9 12 15 12 15 22" />
+          </svg>
+          
+        </a>
+        
+        <a href="javascript:void(0)" class="nav-item" onclick="showPage('resources')" title="Resources">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          
+          
+        </a>
+        
+        <a href="javascript:void(0)" class="nav-item" onclick="showPage('about')" title="About">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          
+          
+        </a>
+        
+        
+        
+        <a href="javascript:void(0)" class="nav-item" onclick="showPage('contacts')" title="Contact">
+        
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          
+          
+        </a>
+      </nav>
+    </aside>
+    <!-- Main Content Area -->
+    
+    <main class="content">
+      
+      <div id="home" class="page active">
+        
+        <!-- Left Side Text -->
+        <div class="text-container">
+          <h1 class="main-title">Your step-by-step guide to modern web development.</h1>
+          <button class="get-started" onclick="showPage('resources')">Start Your Stack</button>
+          
+          
+        </div>
+        <br /><br />
+        
+        <hr />
+        <h2 class="free">Latest Guides</h2>
+        
+        <div class="box-grid">
+          <div class="box">
+            <svg viewBox="0 0 400 600" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 15em; max-width: 400px; display: block;">
+              <!-- Background Shadow -->
+              <rect x="55" y="45" width="290" height="520" rx="45" fill="#e0e0e0" />
+              
+              <!-- Phone Body -->
+              <rect x="50" y="40" width="290" height="520" rx="40" fill="#2c3e50" stroke="#1a252f" stroke-width="4" />
+              
+              <!-- Screen -->
+              <rect x="65" y="70" width="260" height="440" rx="10" fill="#1e1e1e" />
+              
+              <!-- Speaker/Sensors -->
+              <rect x="160" y="52" width="80" height="6" rx="3" fill="#1a252f" />
+              <circle cx="145" cy="55" r="3" fill="#1a252f" />
+              
+              <!-- Home Indicator -->
+              <rect x="155" y="535" width="90" height="5" rx="2.5" fill="#5d6d7e" />
+              
+              <!-- Code Symbols </> -->
+              <polyline points="140,240 100,280 140,320" fill="none" stroke="#3DDC84" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
+              <line x1="220" y1="210" x2="180" y2="350" stroke="#ffffff" stroke-width="15" stroke-linecap="round" />
+              <polyline points="260,240 300,280 260,320" fill="none" stroke="#3DDC84" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
+              
+              <!-- Decorative Code Lines -->
+              <rect x="90" y="380" width="120" height="8" rx="4" fill="#5d6d7e" opacity="0.6" />
+              <rect x="90" y="405" width="180" height="8" rx="4" fill="#5d6d7e" opacity="0.6" />
+              <rect x="90" y="430" width="150" height="8" rx="4" fill="#3DDC84" opacity="0.4" />
+            </svg>
+            
+            
+            
+            <h1 class="keywords">
+              Guides About The Best Mobile Android Editor For Programming and Web Dev
+            </h1>
+            <button class="learn" onclick="showMobile()">Continue Learning >></button>
+            
+            
+            
+            
+            
+          </div>
+        </div>
+        <div class="box-grid">
+          <div class="box">
+            
+            
+            <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+              <!-- Laptop Screen/Lid -->
+              <rect x="30" y="20" width="140" height="90" rx="6" fill="#2d3436" />
+              <!-- Inner Screen -->
+              <rect x="36" y="26" width="128" height="78" rx="2" fill="#000000" />
+              
+              <!-- Code/Editor UI on Screen -->
+              <g fill="none" stroke="#3DDC84" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="80,50 72,58 80,66" /> <!-- < -->
+                <line x1="92" y1="48" x2="100" y2="68" /> <!-- / -->
+                <polyline points="112,50 120,58 112,66" /> <!-- > -->
+              </g>
+              <!-- Subtle line for 'code lines' -->
+              <line x1="72" y1="80" x2="128" y2="80" stroke="#55efc4" stroke-width="2" opacity="0.6" />
+              <line x1="72" y1="88" x2="108" y2="88" stroke="#55efc4" stroke-width="2" opacity="0.4" />
+              
+              <!-- Laptop Body/Keyboard Base -->
+              <path d="M15,110 L185,110 L195,125 L5,125 Z" fill="#636e72" />
+              <!-- Trackpad -->
+              <rect x="85" y="112" width="30" height="10" rx="2" fill="#b2bec3" />
+              <!-- Base Shadow -->
+              <rect x="30" y="125" width="140" height="2" fill="#2d3436" opacity="0.2" />
+            </svg>
+            
+            
+            <h1 class="keywords">
+              Guides About The Best Windows and IOS Editor For Programming and Web Dev
+            </h1>
+            <button class="learn" onclick="showLap()">Continue Learning >></button>
+            
+            
+            
+            
+            
+          </div>
+        </div>
+        
+        
+        <!-- Right Side Animated SVG -->
+        
+      </div>
+      
+      
+      
+      <!-- Page Container Sections -->
+      
+      
+      <div id="resources" class="page">
+        
+        <form>
+          <input type="text" list="languages" placeholder="Choose Categories" class="search" />
+        </form>
+        <datalist id="languages">
+          <option value="HTML">Articles And Blogs on HTML</option>
+          <option value="CSS"></option>
+          <option value="Javascript"></option>
+          
+          
+          
+        </datalist><br />
+        <div class="box-grid">
+          <div class="box">
+            
+            
+            <div style="width: 100%; max-width: 400px; margin: auto;">
+              <svg viewBox="0 0 300 80" xmlns="http://www.w3.org">
+                <!-- Horizontal Road -->
+                <rect x="10" y="25" width="280" height="30" rx="15" fill="#334155" />
+                
+                <!-- Center Line -->
+                <line x1="30" y1="40" x2="270" y2="40" stroke="white" stroke-width="2" stroke-dasharray="10 8" opacity="0.6" />
+                
+                <!-- Foundational Points -->
+                <circle cx="60" cy="40" r="12" fill="#fb923c" stroke="white" stroke-width="2" /> <!-- HTML -->
+                <circle cx="150" cy="40" r="12" fill="#3b82f6" stroke="white" stroke-width="2" /> <!-- CSS -->
+                <circle cx="240" cy="40" r="12" fill="#eab308" stroke="white" stroke-width="2" /> <!-- JS -->
+              </svg>
+            </div>
+            
+            
+            <h1 class="keywords">
+              Roadmap For Web Development 2026
+            </h1>
+            <button class="learn" onclick="showRoad()">Continue Learning >></button>
+          </div>
+          
+        </div>
+        <div class="box-grid">
+          <div class="box">
+            <svg viewBox="0 0 400 600" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 15em; max-width: 400px; display: block;">
+              <!-- Background Shadow -->
+              <rect x="55" y="45" width="290" height="520" rx="45" fill="#e0e0e0" />
+              
+              <!-- Phone Body -->
+              <rect x="50" y="40" width="290" height="520" rx="40" fill="#2c3e50" stroke="#1a252f" stroke-width="4" />
+              
+              <!-- Screen -->
+              <rect x="65" y="70" width="260" height="440" rx="10" fill="#1e1e1e" />
+              
+              <!-- Speaker/Sensors -->
+              <rect x="160" y="52" width="80" height="6" rx="3" fill="#1a252f" />
+              <circle cx="145" cy="55" r="3" fill="#1a252f" />
+              
+              <!-- Home Indicator -->
+              <rect x="155" y="535" width="90" height="5" rx="2.5" fill="#5d6d7e" />
+              
+              <!-- Code Symbols </> -->
+              <polyline points="140,240 100,280 140,320" fill="none" stroke="#3DDC84" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
+              <line x1="220" y1="210" x2="180" y2="350" stroke="#ffffff" stroke-width="15" stroke-linecap="round" />
+              <polyline points="260,240 300,280 260,320" fill="none" stroke="#3DDC84" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
+              
+              <!-- Decorative Code Lines -->
+              <rect x="90" y="380" width="120" height="8" rx="4" fill="#5d6d7e" opacity="0.6" />
+              <rect x="90" y="405" width="180" height="8" rx="4" fill="#5d6d7e" opacity="0.6" />
+              <rect x="90" y="430" width="150" height="8" rx="4" fill="#3DDC84" opacity="0.4" />
+            </svg>
+            
+            
+            
+            <h1 class="keywords">
+              Guides About The Best Mobile Android Editor For Programming and Web Dev
+            </h1>
+            <button class="learn" onclick="showMobile()">Continue Learning >></button>
+            
+            
+            
+            
+            
+          </div>
+        </div>
+        <div class="box-grid">
+          <div class="box">
+            
+            
+            <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+              <!-- Laptop Screen/Lid -->
+              <rect x="30" y="20" width="140" height="90" rx="6" fill="#2d3436" />
+              <!-- Inner Screen -->
+              <rect x="36" y="26" width="128" height="78" rx="2" fill="#000000" />
+              
+              <!-- Code/Editor UI on Screen -->
+              <g fill="none" stroke="#3DDC84" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="80,50 72,58 80,66" /> <!-- < -->
+                <line x1="92" y1="48" x2="100" y2="68" /> <!-- / -->
+                <polyline points="112,50 120,58 112,66" /> <!-- > -->
+              </g>
+              <!-- Subtle line for 'code lines' -->
+              <line x1="72" y1="80" x2="128" y2="80" stroke="#55efc4" stroke-width="2" opacity="0.6" />
+              <line x1="72" y1="88" x2="108" y2="88" stroke="#55efc4" stroke-width="2" opacity="0.4" />
+              
+              <!-- Laptop Body/Keyboard Base -->
+              <path d="M15,110 L185,110 L195,125 L5,125 Z" fill="#636e72" />
+              <!-- Trackpad -->
+              <rect x="85" y="112" width="30" height="10" rx="2" fill="#b2bec3" />
+              <!-- Base Shadow -->
+              <rect x="30" y="125" width="140" height="2" fill="#2d3436" opacity="0.2" />
+            </svg>
+            
+            
+            <h1 class="keywords">
+              Guides About The Best Windows and IOS Editor For Programming and Web Dev
+            </h1>
+            <button class="learn" onclick="showLap()">Continue Learning >></button>
+            
+            
+            
+            
+            
+          </div>
+        </div>
+        
+      </div>
+      
+      <div id="about" class="page">
+        <h2 class="ah">Deep Diving Into Web development Techniques and Tools </h2>
+        
+        <div class="box-grid">
+          <div class="boxs">
+            <!-- Tutorial Code Icon -->
+            <!-- Large Gradient Tutorial Icon (64x64) -->
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <!-- Define a professional dev-centric gradient -->
+                <linearGradient id="tutorialGradient" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#3b82f6" /> <!-- Blue-500 -->
+                  <stop offset="100%" stop-color="#8b5cf6" /> <!-- Purple-500 -->
+                </linearGradient>
+                
+                <!-- Optional: Subtle Drop Shadow for depth -->
+                <filter id="shadow" x="0" y="0" width="200%" height="200%">
+                  <feDropShadow dx="1" dy="1" stdDeviation="1" flood-opacity="0.2" />
+                </filter>
+              </defs>
+              
+              <!-- The Icon Body -->
+              <g filter="url(#shadow)">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="url(#tutorialGradient)" stroke-width="2" stroke-linecap="round" />
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="url(#tutorialGradient)" fill-opacity="0.1" stroke="url(#tutorialGradient)" stroke-width="2" stroke-linejoin="round" />
+                <polygon points="10 9 15 12 10 15 10 9" fill="url(#tutorialGradient)" />
+              </g>
+            </svg>
+            
+            
+            <h1 class="word">In-depth Tutorials</h1>
+          </div>
+        </div>
+        
+        <div class="box-grid">
+          <div class="boxs">
+            <!-- Tutorial Code Icon -->
+            <!-- Large Gradient Tutorial Icon (64x64) -->
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <!-- Define a professional dev-centric gradient -->
+                <linearGradient id="tutorialGradient" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#3b82f6" /> <!-- Blue-500 -->
+                  <stop offset="100%" stop-color="#8b5cf6" /> <!-- Purple-500 -->
+                </linearGradient>
+                
+                <!-- Optional: Subtle Drop Shadow for depth -->
+                <filter id="shadow" x="0" y="0" width="200%" height="200%">
+                  <feDropShadow dx="1" dy="1" stdDeviation="1" flood-opacity="0.2" />
+                </filter>
+              </defs>
+              
+              <!-- The Icon Body -->
+              <g filter="url(#shadow)">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="url(#tutorialGradient)" stroke-width="2" stroke-linecap="round" />
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="url(#tutorialGradient)" fill-opacity="0.1" stroke="url(#tutorialGradient)" stroke-width="2" stroke-linejoin="round" />
+                <polygon points="10 9 15 12 10 15 10 9" fill="url(#tutorialGradient)" />
+              </g>
+            </svg>
+            
+            
+            <h1 class="word">Clean Code Snippets</h1>
+          </div>
+        </div>
+        <div class="box-grid">
+          <div class="boxs">
+            <!-- Tutorial Code Icon -->
+            <!-- Large Gradient Tutorial Icon (64x64) -->
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <!-- Define a professional dev-centric gradient -->
+                <linearGradient id="tutorialGradient" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#3b82f6" /> <!-- Blue-500 -->
+                  <stop offset="100%" stop-color="#8b5cf6" /> <!-- Purple-500 -->
+                </linearGradient>
+                
+                <!-- Optional: Subtle Drop Shadow for depth -->
+                <filter id="shadow" x="0" y="0" width="200%" height="200%">
+                  <feDropShadow dx="1" dy="1" stdDeviation="1" flood-opacity="0.2" />
+                </filter>
+              </defs>
+              
+              <!-- The Icon Body -->
+              <g filter="url(#shadow)">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="url(#tutorialGradient)" stroke-width="2" stroke-linecap="round" />
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="url(#tutorialGradient)" fill-opacity="0.1" stroke="url(#tutorialGradient)" stroke-width="2" stroke-linejoin="round" />
+                <polygon points="10 9 15 12 10 15 10 9" fill="url(#tutorialGradient)" />
+              </g>
+            </svg>
+            
+            
+            <h1 class="word">Modern Dev-Logs</h1>
+          </div>
+        </div>
+        
+        <div class="box-grid">
+          <div class="boxs">
+            <!-- Tutorial Code Icon -->
+            <!-- Large Gradient Tutorial Icon (64x64) -->
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <!-- Define a professional dev-centric gradient -->
+                <linearGradient id="tutorialGradient" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#3b82f6" /> <!-- Blue-500 -->
+                  <stop offset="100%" stop-color="#8b5cf6" /> <!-- Purple-500 -->
+                </linearGradient>
+                
+                <!-- Optional: Subtle Drop Shadow for depth -->
+                <filter id="shadow" x="0" y="0" width="200%" height="200%">
+                  <feDropShadow dx="1" dy="1" stdDeviation="1" flood-opacity="0.2" />
+                </filter>
+              </defs>
+              
+              <!-- The Icon Body -->
+              <g filter="url(#shadow)">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" stroke="url(#tutorialGradient)" stroke-width="2" stroke-linecap="round" />
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="url(#tutorialGradient)" fill-opacity="0.1" stroke="url(#tutorialGradient)" stroke-width="2" stroke-linejoin="round" />
+                <polygon points="10 9 15 12 10 15 10 9" fill="url(#tutorialGradient)" />
+              </g>
+            </svg>
+            
+            
+            <h1 class="word">Tools Guides</h1>
+          </div>
+        </div>
+        
+        
+        
+        
+      </div>
+      <footer class="site-footer">
+        <p>&copy; <span id="year"></span> <a href="#" class="foot">StackSteps.</a> All rights reserved.</p>
+      </footer>
+      
+      
+      
+      
+      
+      <script src="js/main.js"></script>
+      <script>
+        function showRoad() {
+          window.location.href = "roadmap.html"
+        }
+        
+        function showMobile() {
+          window.location.href = "mobile.html"
+        }
+        
+        function showLap() {
+          window.location.href = "windows.html"
+        }
+        document.getElementById('year').textContent = new Date().getFullYear()
+      </script>
+      
+      
+</body>
+
+</html>

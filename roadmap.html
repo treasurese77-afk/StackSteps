@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Roadmaps | StackSteps</title>
+  <link rel="stylesheet" href="css/roadmap.css">
+</head>
+
+<body>
+  <article>
+    
+  
+<div class="header">
+  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+    <!-- Main body (Sun/Moon) -->
+    <path id="sun-moon" d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10z" />
+    <!-- Sunbeams (hidden in dark mode) -->
+    <g id="sun-beams" stroke="currentColor" stroke-width="2">
+      <line x1="12" y1="1" x2="12" y2="3" />
+      <line x1="12" y1="21" x2="12" y2="23" />
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+      <line x1="1" y1="12" x2="3" y2="12" />
+      <line x1="21" y1="12" x2="23" y2="12" />
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+    </g>
+  </svg>
+</button>
+
+ <h1 class="head">Roadmap For Web Dev</h1>
+ <button class="download">Download PDF</button>
+ 
+
+ </div>
+ <h1 class="top">Foundational Skills</h1>
+ <ul>
+   <li>HTML</li>
+ </ul>
+ 
+ </article>
+ <script>
+   const btn = document.getElementById('theme-toggle')
+   btn.addEventListener('click', ()=>{
+     const currenttheme = document.documentElement.getAttribute('data-theme')
+     const targettheme = currenttheme === 'dark' ? 'light':'dark'
+     document.documentElement.setAttribute('data-theme', targettheme)
+     localStorage.setItem('theme', targettheme)
+   })
+ </script>
+</body>
+
+</html>

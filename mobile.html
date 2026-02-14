@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="StackSteps: 
+  Master web dev with Stacksteps! Learn about the  best Mobile Programming Editor. Start building your future now.">
+  
+  
+  <title>Mobile tools | StackSteps</title>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <style>
+    @font-face {
+      font-family: 'Google Sans';
+      src: url("/fonts/GoogleSans_17pt-Regular.ttf"), format('truetype');
+    }
+    
+    body {
+      font-family: 'Google Sans';
+      
+      
+    }
+    
+    .up {
+      position: fixed;
+      right: 0;
+      top: 30em;
+      border-radius: 50%;
+      background: rebeccapurple;
+      color: white;
+      padding: 1;
+      height: 40px;
+      border: none;
+      cursor: pointer;
+    }
+    
+    .up:hover {
+      transform: translateY(2px);
+      background: mediumpurple;
+    }
+    
+    .link {
+      color: rebeccapurple;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .h {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .hi {
+      height: 30px;
+      border-radius: 10px;
+      border: none;
+      padding: 0.625em;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropbtn {
+      background-color: mediumpurple;
+      color: white;
+      padding: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 3em;
+    }
+    
+    .dropcontent {
+      display: none;
+      position: absolute;
+      background: linear-gradient(135deg, #f3e7ff 0%, #e3eeff 100%);
+      min-width: 120px;
+      z-index: 1;
+      height: 100px;
+      
+      
+    }
+    
+    .dropcontent a {
+      color: black;
+      margin: 1em;
+      text-decoration: none;
+      text-align: center;
+      margin-top: 1em;
+      
+      font-weight: bold;
+    }
+    
+    .dropcontent a:hover {
+      background: #A19CCA;
+    }
+    
+    .dropdown:hover .dropcontent {
+      display: block;
+    }
+    
+    .head {
+      font-size: 20pt;
+      text-align: center;
+      color: rebeccapurple;
+      font-weight: bold;
+      
+      
+      margin-left: 0;
+      margin-left: 0.625em;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .download {
+      background: blueviolet;
+      color: white;
+      font-family: 'Google Sans';
+      border-radius: 10px;
+      border: none;
+      height: 50px;
+      padding: 0.625em;
+      cursor: pointer;
+      
+      
+    }
+    
+    .download:hover {
+      transform: translateY(3px);
+    }
+    
+    .no {
+      font-size: 16pt;
+      border: 1px solid blueviolet;
+      border-radius: 50%;
+      padding: 2em;
+      text-align: center;
+    }
+    
+    .top {
+      text-align: center;
+      font-weight: 300;
+      font-size: 20pt;
+    }
+    
+    :root {
+      --bg-color: black;
+      --text-color: white;
+    }
+    
+    [data-theme='dark'] {
+      --bg-color: white;
+      --text-color: #black;
+    }
+    
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.4s ease;
+    }
+    
+    .theme-toggle {
+      background: mediumpurple;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      height: 40px;
+      margin: 0.5;
+      border-radius: 50%;
+      
+    }
+    
+    /* Hide sunbeams and morph icon when in dark mode */
+    [data-theme='dark'] #sun-beams {
+      opacity: 0;
+    }
+    
+    [data-theme='dark'] #sun-moon {
+      /* This shifts the path to look more like a crescent */
+      d: path('M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z');
+    }
+    
+    .title {
+      margin: 0.625em;
+    }
+    
+    .install {
+      background: blueviolet;
+      color: white;
+      border: none;
+      font-family: 'Google Sans', sans-serif;
+      padding: 0.5em;
+      margin-left: 3em;
+    }
+    
+    .install:hover {
+      transform: translateY(3px);
+      background: mediumpurple;
+    }
+  </style>
+</head>
+
+<body>
+  <article>
+    
+    
+    <div class="header">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <!-- Main body (Sun/Moon) -->
+          <path id="sun-moon" d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10z" />
+          <!-- Sunbeams (hidden in dark mode) -->
+          <g id="sun-beams" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </g>
+        </svg>
+      </button>
+      
+      <h1 class="head">Best Mobile Editors</h1>
+      
+      
+      
+    </div>
+    <div class="h">
+      
+      <h1 class="title" id="spck">Spck Editor</h1>
+      
+      <div class="dropdown">
+        
+        <button class="dropbtn">Choose</button>
+        <div class="dropcontent">
+          <a href="#">SPCK </a>
+          <a href="#">Acode</a>
+          <a href="#">Pydroid 3</a>
+        </div>
+        
+      </div>
+      
+    </div>
+    <a href="#spck"><button class="up"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org">
+          <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button></a>
+    <h1>The Hook: "Desktop Power, Mobile Sizes"</h1>
+    <p class="exp">
+      Spck Editor isn't just a basic text editor; it’s a full IDE (Integrated Development Environment) for Android. If you’re a web dev who gets an idea while sitting in traffic or chilling at a cafe, this is the app you open. And Guess what its for free.
+    </p>
+    <ul>
+      <li>
+        <h3>Built-in Git Integration:</h3> This is the big one. You can clone repositories from GitHub, edit the code, and commit/push changes without ever touching a laptop.
+        
+        
+        
+      </li>
+      <li>
+        <h3>IntelliSense & Auto-complete:</h3> It’s really-fast. It suggests code as you type (HTML, CSS, JS, etc.), which is a lifesaver when you’re typing on a tiny glass keyboard, It also saves lot of time.
+      </li>
+      <li>
+        <h3>Instant Preview: </h3>You don’t need to host your site to see if it works. Hit the "Play" button, and it opens an internal browser to show your work instantly.
+      </li>
+      <li>
+        <h3>Viewing and Publishing Labs/Projects</h3>
+        You can also view Labs(Other People Projects), For cloning and learning faster. You can also Create your own labs so others can see too.
+      </li>
+      <li>
+        <h3>Node.js Console: </h3>It has a built-in terminal for testing JavaScript logic on the fly. But is available in The Spck Node.js Verison lf the app.
+      </li>
+      <li>
+        <h3>Files or Zip Import/Export:</h3> Perfect for moving Zip Files or Images, Audio, video e.t.c files from your phone to the App for Building Projectsbin easy way.
+      </li>
+    </ul>
+    <button class="install">Install Spck Editor</button><br /><br /><br />
+    <div class="h">
+      
+      <h1 class="title" id="spck">Acode Editor</h1>
+      
+      
+    </div>
+    <a href="#spck"><button class="up"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org">
+          <path d="M12 19V5M12 5L5 12M12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button></a>
+    <h1>The Hook: "Desktop Power, Mobile Sizes"</h1>
+    <p class="exp">
+      Spck Editor isn't just a basic text editor; it’s a full IDE (Integrated Development Environment) for Android. If you’re a web dev who gets an idea while sitting in traffic or chilling at a cafe, this is the app you open. And Guess what its for free.
+    </p>
+    <ul>
+      <li>
+        <h3>Built-in Git Integration:</h3> This is the big one. You can clone repositories from GitHub, edit the code, and commit/push changes without ever touching a laptop.
+        
+        
+        
+      </li>
+      <li>
+        <h3>IntelliSense & Auto-complete:</h3> It’s really-fast. It suggests code as you type (HTML, CSS, JS, etc.), which is a lifesaver when you’re typing on a tiny glass keyboard, It also saves lot of time.
+      </li>
+      <li>
+        <h3>Instant Preview: </h3>You don’t need to host your site to see if it works. Hit the "Play" button, and it opens an internal browser to show your work instantly.
+      </li>
+      <li>
+        <h3>Viewing and Publishing Labs/Projects</h3>
+        You can also view Labs(Other People Projects), For cloning and learning faster. You can also Create your own labs so others can see too.
+      </li>
+      <li>
+        <h3>Node.js Console: </h3>It has a built-in terminal for testing JavaScript logic on the fly. But is available in The Spck Node.js Verison lf the app.
+      </li>
+      <li>
+        <h3>Files or Zip Import/Export:</h3> Perfect for moving Zip Files or Images, Audio, video e.t.c files from your phone to the App for Building Projectsbin easy way.
+      </li>
+    </ul>
+    <button class="install">Install Acode Editor</button>
+  </article>
+  <script>
+    const btn = document.getElementById('theme-toggle')
+    btn.addEventListener('click', () => {
+      const currenttheme = document.documentElement.getAttribute('data-theme')
+      const targettheme = currenttheme === 'dark' ? 'light' : 'dark'
+      document.documentElement.setAttribute('data-theme', targettheme)
+      localStorage.setItem('theme', targettheme)
+    })
+  </script>
+</body>
+
+</html>
