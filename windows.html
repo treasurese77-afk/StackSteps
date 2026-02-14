@@ -4,11 +4,224 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
+  
+  <title>Windows & iOS Editors | StackSteps</title>
+  
+  <style>
+    @font-face {
+      font-family: 'Google Sans';
+      src: url("/fonts/GoogleSans_17pt-Regular.ttf"), format('truetype');
+    }
+    
+    :root {
+      --bg-color: black;
+      --text-color: white;
+    }
+    
+    [data-theme='dark'] {
+      --bg-color: white;
+      --text-color: #black;
+    }
+    
+    
+    
+    .theme-toggle {
+      background: mediumpurple;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      height: 40px;
+      margin: 0.5;
+      border-radius: 50%;
+      
+    }
+    
+    /* Hide sunbeams and morph icon when in dark mode */
+    [data-theme='dark'] #sun-beams {
+      opacity: 0;
+    }
+    
+    [data-theme='dark'] #sun-moon {
+      /* This shifts the path to look more like a crescent */
+      d: path('M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z');
+    }
+    
+    body {
+      margin: 0;
+      font-family: 'Google Sans', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.4s ease;
+    }
+    
+    article {
+      padding: 1em;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1em;
+    }
+    
+    .head {
+      color: rebeccapurple;
+    }
+    
+    .h {
+      margin-top: 2em;
+    }
+    
+    .title {
+      margin-bottom: 0;
+    }
+    
+    .exp {
+      line-height: 1.6;
+      color: black;
+    }
+    
+    .install {
+      background: blueviolet;
+      color: white;
+      border: none;
+      padding: 0.7em 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 0.7em;
+    }
+    
+    .install:hover {
+      background: mediumpurple;
+      transform: translateY(2px);
+    }
+    
+    ul {
+      padding-left: 1.2em;
+    }
+    
+    li {
+      margin-bottom: 0.5em;
+    }
+  </style>
 </head>
 
 <body>
   
+  <article>
+    
+    <div class="header">
+      
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <!-- Main body (Sun/Moon) -->
+          <path id="sun-moon" d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10z" />
+          <!-- Sunbeams (hidden in dark mode) -->
+          <g id="sun-beams" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </g>
+        </svg>
+      </button>
+      
+      
+      
+      
+      
+      
+      <h1 class="head">Best Windows & iOS Editors</h1>
+    </div>
+    
+    <!-- ================= WINDOWS EDITORS ================= -->
+    
+    <h2>Windows / Laptop Editors</h2>
+    
+    <div class="h">
+      <h1 class="title">Visual Studio Code</h1>
+    </div>
+    
+    <p class="exp">
+      Visual Studio Code is a free and powerful desktop code editor made by
+      Microsoft.
+      It is one of the most used editors for web and software development.
+    </p>
+    
+    <ul>
+      <li>Large extension marketplace</li>
+      <li>Built-in Git support</li>
+      <li>Debugger for many languages</li>
+      <li>Great for frontend and backend</li>
+    </ul>
+    
+    <button class="install" onclick="window.location.href='https://code.visualstudio.com/download'">
+      Install Visual Studio Code (Windows)
+    </button>
+    
+    
+    <div class="h">
+      <h1 class="title">Sublime Text</h1>
+    </div>
+    
+    <p class="exp">
+      Sublime Text is a very fast and lightweight desktop editor.
+      It is perfect if you want speed and a clean coding experience.
+    </p>
+    
+    <ul>
+      <li>Very fast startup</li>
+      <li>Multiple cursors editing</li>
+      <li>Supports many languages</li>
+      <li>Low memory usage</li>
+    </ul>
+    
+    <button class="install" onclick="window.location.href='https://www.sublimetext.com/download'">
+      Install Sublime Text (Windows)
+    </button>
+    
+    
+    
+    <!-- ================= IOS / MACOS EDITOR ================= -->
+    
+    <br><br>
+    <h2>iOS / macOS Editor</h2>
+    
+    <div class="h">
+      <h1 class="title">Xcode</h1>
+    </div>
+    
+    <p class="exp">
+      Xcode is the official development environment from
+      Apple.
+      It is required if you want to build and publish iPhone and iPad apps.
+    </p>
+    
+    <ul>
+      <li>Swift and Objective-C support</li>
+      <li>iPhone and iPad simulator</li>
+      <li>Visual interface designer</li>
+      <li>Best tool for native iOS apps</li>
+    </ul>
+    
+    <button class="install" onclick="window.location.href='https://apps.apple.com/app/xcode/id497799835'">
+      Install Xcode (Mac / iOS development)
+    </button>
+    
+  </article>
+  <script type="text/javascript" charset="utf-8">
+    const btn = document.getElementById('theme-toggle')
+    btn.addEventListener('click', () => {
+      const currenttheme = document.documentElement.getAttribute('data-theme')
+      const targettheme = currenttheme === 'dark' ? 'light' : 'dark'
+      document.documentElement.setAttribute('data-theme', targettheme)
+      localStorage.setItem('theme', targettheme)
+    })
+  </script>
 </body>
 
 </html>
