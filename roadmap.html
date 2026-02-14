@@ -4,53 +4,289 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Roadmaps | StackSteps</title>
-  <link rel="stylesheet" href="CSS/roadmap.css">
+  
+  <title>Web Development Roadmap | StackSteps</title>
+  
+  <style>
+    @font-face {
+      font-family: 'Google Sans';
+      src: url("/fonts/GoogleSans_17pt-Regular.ttf"), format('truetype');
+    }
+    
+    :root {
+      --bg-color: black;
+      --text-color: white;
+    }
+    
+    [data-theme='dark'] {
+      --bg-color: white;
+      --text-color: #black;
+    }
+    
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.4s ease;
+      font-family: 'Google Sans', sans-serif;
+    }
+    
+    .theme-toggle {
+      background: mediumpurple;
+      border: none;
+      cursor: pointer;
+      padding: 10px;
+      height: 40px;
+      margin: 0.5;
+      border-radius: 50%;
+      
+    }
+    
+    /* Hide sunbeams and morph icon when in dark mode */
+    [data-theme='dark'] #sun-beams {
+      opacity: 0;
+    }
+    
+    [data-theme='dark'] #sun-moon {
+      /* This shifts the path to look more like a crescent */
+      d: path('M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z');
+    }
+    
+    article {
+      padding: 1em;
+      max-width: 900px;
+      margin: auto;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1em;
+    }
+    
+    .head {
+      color: rebeccapurple;
+      text-align: center;
+    }
+    
+    .h {
+      margin-top: 2em;
+    }
+    
+    .title {
+      color: #fff;
+      font-size: 1.5em;
+      margin-top: 1em;
+    }
+    
+    .exp {
+      line-height: 1.6;
+      color: #ddd;
+      margin-bottom: 1em;
+    }
+    
+    .install {
+      background: blueviolet;
+      color: white;
+      border: none;
+      padding: 0.7em 1.2em;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 0.7em;
+    }
+    
+    .install:hover {
+      background: mediumpurple;
+      transform: translateY(2px);
+    }
+    
+    ul {
+      padding-left: 1.2em;
+      margin-bottom: 1em;
+    }
+    
+    li {
+      margin-bottom: 0.5em;
+    }
+    
+    section {
+      margin-bottom: 3em;
+    }
+    
+    hr {
+      border: 0.5px solid #444;
+      margin: 2em 0;
+    }
+  </style>
 </head>
 
 <body>
+  
   <article>
     
-  
-<div class="header">
-  <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-    <!-- Main body (Sun/Moon) -->
-    <path id="sun-moon" d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10z" />
-    <!-- Sunbeams (hidden in dark mode) -->
-    <g id="sun-beams" stroke="currentColor" stroke-width="2">
-      <line x1="12" y1="1" x2="12" y2="3" />
-      <line x1="12" y1="21" x2="12" y2="23" />
-      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
-      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
-      <line x1="1" y1="12" x2="3" y2="12" />
-      <line x1="21" y1="12" x2="23" y2="12" />
-      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
-      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
-    </g>
-  </svg>
-</button>
-
- <h1 class="head">Roadmap For Web Dev</h1>
- <button class="download">Download PDF</button>
- 
-
- </div>
- <h1 class="top">Foundational Skills</h1>
- <ul>
-   <li>HTML</li>
- </ul>
- 
- </article>
- <script>
-   const btn = document.getElementById('theme-toggle')
-   btn.addEventListener('click', ()=>{
-     const currenttheme = document.documentElement.getAttribute('data-theme')
-     const targettheme = currenttheme === 'dark' ? 'light':'dark'
-     document.documentElement.setAttribute('data-theme', targettheme)
-     localStorage.setItem('theme', targettheme)
-   })
- </script>
+    <div class="header">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <!-- Main body (Sun/Moon) -->
+          <path id="sun-moon" d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10z" />
+          <!-- Sunbeams (hidden in dark mode) -->
+          <g id="sun-beams" stroke="currentColor" stroke-width="2">
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </g>
+        </svg>
+      </button>
+      
+      <h1 class="head">Complete Web Development Roadmap</h1>
+    </div>
+    
+    <!-- ================= FRONTEND ================= -->
+    <section>
+      <h2 class="title">Frontend Development</h2>
+      <p class="exp">
+        Frontend development is everything your users see on the web. It focuses on creating
+        responsive, interactive, and visually appealing websites.
+      </p>
+      
+      <ul>
+        <li>HTML – Structure your content</li>
+        <li>CSS – Style your content</li>
+        <li>JavaScript – Add interactivity</li>
+        <li>Responsive Design – Mobile-friendly websites</li>
+        <li>Frameworks & Libraries: React, Vue, Angular</li>
+        <li>Preprocessors: Sass, Less</li>
+        <li>Build Tools: Webpack, Vite, Parcel</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <!-- ================= BACKEND ================= -->
+    <section>
+      <h2 class="title">Backend Development</h2>
+      <p class="exp">
+        Backend development is responsible for the server, databases, and application logic.
+        It handles data, authentication, APIs, and business rules.
+      </p>
+      
+      <ul>
+        <li>Programming Languages: Node.js, Python, PHP, Ruby, Java, C#</li>
+        <li>Frameworks: Express.js, Django, Laravel, Ruby on Rails, Spring Boot</li>
+        <li>REST & GraphQL APIs</li>
+        <li>Authentication & Authorization (JWT, OAuth)</li>
+        <li>Server Management (Linux basics, Nginx, Apache)</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <!-- ================= DATABASE ================= -->
+    <section>
+      <h2 class="title">Database</h2>
+      <p class="exp">
+        Databases store and manage the data your application uses. Knowing both SQL and NoSQL
+        databases is key for modern web development.
+      </p>
+      
+      <ul>
+        <li>SQL Databases: MySQL, PostgreSQL, SQLite</li>
+        <li>NoSQL Databases: MongoDB, Firebase, DynamoDB</li>
+        <li>Database Design: Normalization, Relations, Indexing</li>
+        <li>CRUD Operations & Queries</li>
+        <li>Connecting Database with Backend</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <!-- ================= VERSION CONTROL ================= -->
+    <section>
+      <h2 class="title">Version Control</h2>
+      <p class="exp">
+        Version control helps track and manage code changes, collaborate with other developers,
+        and maintain project history.
+      </p>
+      
+      <ul>
+        <li>Git Basics: init, add, commit, push, pull</li>
+        <li>Branching & Merging</li>
+        <li>Remote Repositories: GitHub, GitLab, Bitbucket</li>
+        <li>Pull Requests & Code Reviews</li>
+        <li>Managing Conflicts</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <!-- ================= DEV TOOLS ================= -->
+    <section>
+      <h2 class="title">Developer Tools</h2>
+      <p class="exp">
+        Modern web development relies on tools that speed up development, debug issues,
+        and maintain code quality.
+      </p>
+      
+      <ul>
+        <li>Code Editors: Visual Studio Code, Sublime Text, Atom</li>
+        <li>Browser DevTools (Chrome, Firefox)</li>
+        <li>Package Managers: npm, yarn</li>
+        <li>Linters & Formatters: ESLint, Prettier</li>
+        <li>Versioning & Deployment Tools: Docker, CI/CD pipelines</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <!-- ================= DEPLOYMENT ================= -->
+    <section>
+      <h2 class="title">Deployment & Hosting</h2>
+      <p class="exp">
+        After building your website or app, you need to deploy it so others can access it.
+        Understanding hosting, domains, and deployment tools is important.
+      </p>
+      
+      <ul>
+        <li>Hosting Platforms: Netlify, Vercel, Firebase, AWS, Heroku</li>
+        <li>Custom Domains & DNS</li>
+        <li>Continuous Deployment & Integration</li>
+        <li>Serverless Hosting</li>
+      </ul>
+    </section>
+    
+    <hr>
+    
+    <!-- ================= EXTRA SKILLS ================= -->
+    <section>
+      <h2 class="title">Extra Skills</h2>
+      <p class="exp">
+        These skills help you become a well-rounded web developer.
+      </p>
+      
+      <ul>
+        <li>Responsive Design & Accessibility (ARIA, WCAG)</li>
+        <li>Web Performance Optimization</li>
+        <li>Progressive Web Apps (PWA)</li>
+        <li>Security Basics (HTTPS, XSS, SQL Injection)</li>
+        <li>Testing (Unit Tests, Integration Tests)</li>
+        <li>Soft Skills: Problem-solving, Communication, Documentation</li>
+      </ul>
+    </section>
+    
+  </article>
+  <script type="text/javascript" charset="utf-8">
+    const btn = document.getElementById('theme-toggle')
+    btn.addEventListener('click', () => {
+      const currenttheme = document.documentElement.getAttribute('data-theme')
+      const targettheme = currenttheme === 'dark' ? 'light' : 'dark'
+      document.documentElement.setAttribute('data-theme', targettheme)
+      localStorage.setItem('theme', targettheme)
+    })
+  </script>
 </body>
 
 </html>
