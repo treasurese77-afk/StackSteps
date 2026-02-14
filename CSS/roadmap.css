@@ -1,0 +1,84 @@
+@font-face {
+  font-family: 'Google Sans';
+  src: url("/fonts/GoogleSans_17pt-Regular.ttf"), format('truetype');
+}
+body{
+  font-family: 'Google Sans';
+  
+  
+}
+.head{
+  font-size: 20pt;
+  text-align: center;
+  color: rebeccapurple;
+  font-weight: bold;
+  
+ 
+  margin-left: 0;
+  margin-left: 0.625em;
+}
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+.download{
+  background: blueviolet;
+  color: white;
+  font-family: 'Google Sans';
+  border-radius: 10px;
+  border: none;
+  height: 50px;
+  padding: 0.625em;
+  cursor: pointer;
+
+  
+}
+.download:hover{
+  transform: translateY(3px);
+}
+.no{
+  font-size: 16pt;
+  border: 1px solid blueviolet;
+  border-radius: 50%;
+  padding: 2em;
+  text-align: center;
+}
+.top{
+  text-align: center;
+  font-weight: 300;
+  font-size: 20pt;
+}
+:root {
+  --bg-color: black;
+  --text-color: white;
+}
+
+[data-theme='dark'] {
+  --bg-color: white;
+  --text-color: #black;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease;
+}
+
+.theme-toggle {
+  background: mediumpurple;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  height: 40px;
+  margin: 0.5;
+  border-radius: 50%;
+  
+}
+
+/* Hide sunbeams and morph icon when in dark mode */
+[data-theme='dark'] #sun-beams { opacity: 0; }
+[data-theme='dark'] #sun-moon {
+  /* This shifts the path to look more like a crescent */
+  d: path('M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z');
+}
+
