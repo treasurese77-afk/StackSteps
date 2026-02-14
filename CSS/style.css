@@ -1,11 +1,8 @@
-@font-face {
-  font-family: 'Google Sans';
-  src: url('/fonts/GoogleSans_17pt-Regular.ttf'), format('truetype');
-}
+
 
 body {
   margin: 0;
-  
+  font-family: 'Google Sans Flex', sans-serif;
   overflow-x: hidden;
 }
 
@@ -90,14 +87,14 @@ body {
 
 h1 {
   color: black;
-  font-family: 'Google Sans', sans-serif;
+  
   margin-top: 2em;
 }
 
 .mini {
   color: blueviolet;
   font-weight: bold;
-  font-family: 'Google Sans', sans-serif;
+  
 }
 
 .get-started {
@@ -107,7 +104,7 @@ h1 {
   font-size: 15px;
   background: blueviolet;
   color: white;
-  font-family: 'Google Sans', sans-serif;
+  
   box-shadow: 0 10px 25px mediumpurple;
 }
 
@@ -121,7 +118,7 @@ hr {
 
 .free {
   text-align: center;
-  font-family: 'Google Sans', sans-serif;
+  
   color: black;
 }
 
@@ -193,7 +190,6 @@ hr {
 }
 
 .keywords {
-  font-family: 'Google Sans', sans-serif;
   color: black;
   font-size: 14pt;
   text-align: center;
@@ -206,7 +202,7 @@ hr {
   border-radius: 25px;
   border: 2px solid blueviolet;
   background: transparent;
-  font-family: 'Google Sans', sans-serif;
+  
   display: block;
   margin: auto;
 }
@@ -232,8 +228,7 @@ header {
 .moto {
   margin-top: 0;
   font-size: 13px;
-  font-family: 'Google Sans', sans-serif;
-}
+  }
 
 svg {
   color: black;
@@ -301,7 +296,7 @@ form input {
   border-radius: 10px;
   border: none;
   box-shadow: 0px 10px 25px mediumpurple;
-  font-family: 'Google Sans', sans-serif;
+  
 }
 
 form input:hover {
@@ -334,7 +329,6 @@ form .send {
   border: none;
   background: purple;
   color: #ffffff;
-  font-family: 'Google Sans', sans-serif;
 }
 
 form .send:hover {
@@ -351,7 +345,6 @@ form .send:hover {
 }
 
 .submit {
-  font-family: 'Google Sans', sans-serif;
   padding: 0.625em;
   text-align: center;
   border-radius: 8px;
@@ -371,7 +364,7 @@ form .send:hover {
 }
 
 .privacy {
-  font-family: 'Google Sans', sans-serif;
+  
 }
 
 @keyframes fade {
@@ -391,7 +384,7 @@ form .send:hover {
 
 .ah {
   margin-top: 5em;
-  font-family: 'Google Sans', sans-serif;
+  
   font-weight: bold;
   text-align: center;
   
@@ -440,7 +433,7 @@ form .send:hover {
 
 .site-footer p {
     margin: 0;
-    font-family: 'Google Sans', sans-serif;
+    
 }
 .foot{
   color: purple;
